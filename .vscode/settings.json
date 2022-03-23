@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "fan_driver.h": "c",
+        "wireless_receiver.h": "c",
+        "limits": "c",
+        "cstdlib": "c",
+        "socket.h": "c"
+    }
+}

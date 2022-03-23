@@ -1,0 +1,4 @@
+/home/paul/fan_controller/build/CMakeFiles/rebuild_cache.dir
+/home/paul/fan_controller/build/CMakeFiles/edit_cache.dir
+/home/paul/fan_controller/build/CMakeFiles/fan_controller_app_mock.dir
+/home/paul/fan_controller/build/CMakeFiles/fan_controller.dir
