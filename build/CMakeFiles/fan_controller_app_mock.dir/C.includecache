@@ -6,6 +6,26 @@
 
 #IncludeRegexTransform: 
 
+../include/fan_controller/fan_control_protocol.h
+stdint.h
+../include/fan_controller/stdint.h
+
+../include/fan_controller/fan_driver.h
+registers.h
+../include/fan_controller/registers.h
+
+../include/fan_controller/registers.h
+simulated_register_area.h
+../include/fan_controller/simulated_register_area.h
+
+../include/fan_controller/simulated_register_area.h
+stdint.h
+../include/fan_controller/stdint.h
+
+../include/wireless_receiver.h
+pthread.h
+-
+
 /home/paul/fan_controller/src/main.c
 stdlib.h
 -

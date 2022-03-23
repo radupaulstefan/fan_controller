@@ -38,6 +38,8 @@ target_include_directories(
     ${PROJECT_NAME}
     PUBLIC
     include/fan_controller
+    ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_SOURCE_DIR}/build
 )
 
 if(${PROJECT_NAME}_BUILD_WITH_APP_MOCK)
@@ -46,11 +48,19 @@ if(${PROJECT_NAME}_BUILD_WITH_APP_MOCK)
         src/main.c
         src/wireless_receiver.c)
   add_executable(${PROJECT_NAME}_app_mock ${mock_sources})
+  
+  target_include_directories(
+    ${PROJECT_NAME}_app_mock
+    PUBLIC
+    include
+    include/fan_controller
+)
+
 endif()
 
 
 message(INFO "sdafasdfasdfasdfasd ${CMAKE_SOURCE_DIR}")
-# target_link_libraries(${PROJECT_NAME}_APP_MOCK_EXECUTABLE ${CMAKE_SOURCE_DIR}/build/fan_controller}
+target_link_libraries(${PROJECT_NAME}_app_mock LINK_PUBLIC fan_controller.a)
 
 
 # Add pthread

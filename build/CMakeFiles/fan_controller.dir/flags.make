@@ -6,5 +6,5 @@ C_FLAGS = -g   -pthread
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/paul/fan_controller/include/fan_controller 
+C_INCLUDES = -I/home/paul/fan_controller/include/fan_controller -I/home/paul/fan_controller -I/home/paul/fan_controller/build 
 
