@@ -111,19 +111,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named fan_controller_app_mock
-
-# Build rule for target.
-fan_controller_app_mock: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 fan_controller_app_mock
-.PHONY : fan_controller_app_mock
-
-# fast build rule for target.
-fan_controller_app_mock/fast:
-	$(MAKE) -f CMakeFiles/fan_controller_app_mock.dir/build.make CMakeFiles/fan_controller_app_mock.dir/build
-.PHONY : fan_controller_app_mock/fast
-
-#=============================================================================
 # Target rules for targets named fan_controller
 
 # Build rule for target.
@@ -133,143 +120,21 @@ fan_controller: cmake_check_build_system
 
 # fast build rule for target.
 fan_controller/fast:
-	$(MAKE) -f CMakeFiles/fan_controller.dir/build.make CMakeFiles/fan_controller.dir/build
+	$(MAKE) -f fan_controller/CMakeFiles/fan_controller.dir/build.make fan_controller/CMakeFiles/fan_controller.dir/build
 .PHONY : fan_controller/fast
 
-src/fan_controller/fan_control_protocol.o: src/fan_controller/fan_control_protocol.c.o
+#=============================================================================
+# Target rules for targets named fan_controller_app_mock
 
-.PHONY : src/fan_controller/fan_control_protocol.o
+# Build rule for target.
+fan_controller_app_mock: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 fan_controller_app_mock
+.PHONY : fan_controller_app_mock
 
-# target to build an object file
-src/fan_controller/fan_control_protocol.c.o:
-	$(MAKE) -f CMakeFiles/fan_controller.dir/build.make CMakeFiles/fan_controller.dir/src/fan_controller/fan_control_protocol.c.o
-.PHONY : src/fan_controller/fan_control_protocol.c.o
-
-src/fan_controller/fan_control_protocol.i: src/fan_controller/fan_control_protocol.c.i
-
-.PHONY : src/fan_controller/fan_control_protocol.i
-
-# target to preprocess a source file
-src/fan_controller/fan_control_protocol.c.i:
-	$(MAKE) -f CMakeFiles/fan_controller.dir/build.make CMakeFiles/fan_controller.dir/src/fan_controller/fan_control_protocol.c.i
-.PHONY : src/fan_controller/fan_control_protocol.c.i
-
-src/fan_controller/fan_control_protocol.s: src/fan_controller/fan_control_protocol.c.s
-
-.PHONY : src/fan_controller/fan_control_protocol.s
-
-# target to generate assembly for a file
-src/fan_controller/fan_control_protocol.c.s:
-	$(MAKE) -f CMakeFiles/fan_controller.dir/build.make CMakeFiles/fan_controller.dir/src/fan_controller/fan_control_protocol.c.s
-.PHONY : src/fan_controller/fan_control_protocol.c.s
-
-src/fan_controller/fan_driver.o: src/fan_controller/fan_driver.c.o
-
-.PHONY : src/fan_controller/fan_driver.o
-
-# target to build an object file
-src/fan_controller/fan_driver.c.o:
-	$(MAKE) -f CMakeFiles/fan_controller.dir/build.make CMakeFiles/fan_controller.dir/src/fan_controller/fan_driver.c.o
-.PHONY : src/fan_controller/fan_driver.c.o
-
-src/fan_controller/fan_driver.i: src/fan_controller/fan_driver.c.i
-
-.PHONY : src/fan_controller/fan_driver.i
-
-# target to preprocess a source file
-src/fan_controller/fan_driver.c.i:
-	$(MAKE) -f CMakeFiles/fan_controller.dir/build.make CMakeFiles/fan_controller.dir/src/fan_controller/fan_driver.c.i
-.PHONY : src/fan_controller/fan_driver.c.i
-
-src/fan_controller/fan_driver.s: src/fan_controller/fan_driver.c.s
-
-.PHONY : src/fan_controller/fan_driver.s
-
-# target to generate assembly for a file
-src/fan_controller/fan_driver.c.s:
-	$(MAKE) -f CMakeFiles/fan_controller.dir/build.make CMakeFiles/fan_controller.dir/src/fan_controller/fan_driver.c.s
-.PHONY : src/fan_controller/fan_driver.c.s
-
-src/fan_controller/simulated_register_area.o: src/fan_controller/simulated_register_area.c.o
-
-.PHONY : src/fan_controller/simulated_register_area.o
-
-# target to build an object file
-src/fan_controller/simulated_register_area.c.o:
-	$(MAKE) -f CMakeFiles/fan_controller.dir/build.make CMakeFiles/fan_controller.dir/src/fan_controller/simulated_register_area.c.o
-.PHONY : src/fan_controller/simulated_register_area.c.o
-
-src/fan_controller/simulated_register_area.i: src/fan_controller/simulated_register_area.c.i
-
-.PHONY : src/fan_controller/simulated_register_area.i
-
-# target to preprocess a source file
-src/fan_controller/simulated_register_area.c.i:
-	$(MAKE) -f CMakeFiles/fan_controller.dir/build.make CMakeFiles/fan_controller.dir/src/fan_controller/simulated_register_area.c.i
-.PHONY : src/fan_controller/simulated_register_area.c.i
-
-src/fan_controller/simulated_register_area.s: src/fan_controller/simulated_register_area.c.s
-
-.PHONY : src/fan_controller/simulated_register_area.s
-
-# target to generate assembly for a file
-src/fan_controller/simulated_register_area.c.s:
-	$(MAKE) -f CMakeFiles/fan_controller.dir/build.make CMakeFiles/fan_controller.dir/src/fan_controller/simulated_register_area.c.s
-.PHONY : src/fan_controller/simulated_register_area.c.s
-
-src/main.o: src/main.c.o
-
-.PHONY : src/main.o
-
-# target to build an object file
-src/main.c.o:
-	$(MAKE) -f CMakeFiles/fan_controller_app_mock.dir/build.make CMakeFiles/fan_controller_app_mock.dir/src/main.c.o
-.PHONY : src/main.c.o
-
-src/main.i: src/main.c.i
-
-.PHONY : src/main.i
-
-# target to preprocess a source file
-src/main.c.i:
-	$(MAKE) -f CMakeFiles/fan_controller_app_mock.dir/build.make CMakeFiles/fan_controller_app_mock.dir/src/main.c.i
-.PHONY : src/main.c.i
-
-src/main.s: src/main.c.s
-
-.PHONY : src/main.s
-
-# target to generate assembly for a file
-src/main.c.s:
-	$(MAKE) -f CMakeFiles/fan_controller_app_mock.dir/build.make CMakeFiles/fan_controller_app_mock.dir/src/main.c.s
-.PHONY : src/main.c.s
-
-src/wireless_receiver.o: src/wireless_receiver.c.o
-
-.PHONY : src/wireless_receiver.o
-
-# target to build an object file
-src/wireless_receiver.c.o:
-	$(MAKE) -f CMakeFiles/fan_controller_app_mock.dir/build.make CMakeFiles/fan_controller_app_mock.dir/src/wireless_receiver.c.o
-.PHONY : src/wireless_receiver.c.o
-
-src/wireless_receiver.i: src/wireless_receiver.c.i
-
-.PHONY : src/wireless_receiver.i
-
-# target to preprocess a source file
-src/wireless_receiver.c.i:
-	$(MAKE) -f CMakeFiles/fan_controller_app_mock.dir/build.make CMakeFiles/fan_controller_app_mock.dir/src/wireless_receiver.c.i
-.PHONY : src/wireless_receiver.c.i
-
-src/wireless_receiver.s: src/wireless_receiver.c.s
-
-.PHONY : src/wireless_receiver.s
-
-# target to generate assembly for a file
-src/wireless_receiver.c.s:
-	$(MAKE) -f CMakeFiles/fan_controller_app_mock.dir/build.make CMakeFiles/fan_controller_app_mock.dir/src/wireless_receiver.c.s
-.PHONY : src/wireless_receiver.c.s
+# fast build rule for target.
+fan_controller_app_mock/fast:
+	$(MAKE) -f application_mock/CMakeFiles/fan_controller_app_mock.dir/build.make application_mock/CMakeFiles/fan_controller_app_mock.dir/build
+.PHONY : fan_controller_app_mock/fast
 
 # Help Target
 help:
@@ -279,23 +144,8 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... fan_controller_app_mock"
 	@echo "... fan_controller"
-	@echo "... src/fan_controller/fan_control_protocol.o"
-	@echo "... src/fan_controller/fan_control_protocol.i"
-	@echo "... src/fan_controller/fan_control_protocol.s"
-	@echo "... src/fan_controller/fan_driver.o"
-	@echo "... src/fan_controller/fan_driver.i"
-	@echo "... src/fan_controller/fan_driver.s"
-	@echo "... src/fan_controller/simulated_register_area.o"
-	@echo "... src/fan_controller/simulated_register_area.i"
-	@echo "... src/fan_controller/simulated_register_area.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
-	@echo "... src/wireless_receiver.o"
-	@echo "... src/wireless_receiver.i"
-	@echo "... src/wireless_receiver.s"
+	@echo "... fan_controller_app_mock"
 .PHONY : help
 
 

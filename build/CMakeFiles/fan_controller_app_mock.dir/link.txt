@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/fan_controller_app_mock.dir/src/main.c.o CMakeFiles/fan_controller_app_mock.dir/src/wireless_receiver.c.o  -o fan_controller_app_mock  -Wl,-Bstatic -lfan_controller -Wl,-Bdynamic 

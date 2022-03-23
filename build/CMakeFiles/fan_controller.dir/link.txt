@@ -1,2 +1,0 @@
-/usr/bin/ar qc libfan_controller.a  CMakeFiles/fan_controller.dir/src/fan_controller/simulated_register_area.c.o CMakeFiles/fan_controller.dir/src/fan_controller/fan_driver.c.o CMakeFiles/fan_controller.dir/src/fan_controller/fan_control_protocol.c.o
-/usr/bin/ranlib libfan_controller.a

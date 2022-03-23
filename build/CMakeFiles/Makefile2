@@ -53,75 +53,112 @@ CMAKE_BINARY_DIR = /home/paul/fan_controller/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/fan_controller_app_mock.dir/all
-all: CMakeFiles/fan_controller.dir/all
+all: fan_controller/all
+all: application_mock/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: fan_controller/preinstall
+preinstall: application_mock/preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/fan_controller_app_mock.dir/clean
-clean: CMakeFiles/fan_controller.dir/clean
+clean: fan_controller/clean
+clean: application_mock/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/fan_controller_app_mock.dir
+# Directory level rules for directory application_mock
 
-# All Build rule for target.
-CMakeFiles/fan_controller_app_mock.dir/all:
-	$(MAKE) -f CMakeFiles/fan_controller_app_mock.dir/build.make CMakeFiles/fan_controller_app_mock.dir/depend
-	$(MAKE) -f CMakeFiles/fan_controller_app_mock.dir/build.make CMakeFiles/fan_controller_app_mock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/paul/fan_controller/build/CMakeFiles --progress-num=5,6,7 "Built target fan_controller_app_mock"
-.PHONY : CMakeFiles/fan_controller_app_mock.dir/all
+# Recursive "all" directory target.
+application_mock/all: application_mock/CMakeFiles/fan_controller_app_mock.dir/all
 
-# Build rule for subdir invocation for target.
-CMakeFiles/fan_controller_app_mock.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/paul/fan_controller/build/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/fan_controller_app_mock.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/paul/fan_controller/build/CMakeFiles 0
-.PHONY : CMakeFiles/fan_controller_app_mock.dir/rule
+.PHONY : application_mock/all
 
-# Convenience name for target.
-fan_controller_app_mock: CMakeFiles/fan_controller_app_mock.dir/rule
+# Recursive "preinstall" directory target.
+application_mock/preinstall:
 
-.PHONY : fan_controller_app_mock
+.PHONY : application_mock/preinstall
 
-# clean rule for target.
-CMakeFiles/fan_controller_app_mock.dir/clean:
-	$(MAKE) -f CMakeFiles/fan_controller_app_mock.dir/build.make CMakeFiles/fan_controller_app_mock.dir/clean
-.PHONY : CMakeFiles/fan_controller_app_mock.dir/clean
+# Recursive "clean" directory target.
+application_mock/clean: application_mock/CMakeFiles/fan_controller_app_mock.dir/clean
+
+.PHONY : application_mock/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/fan_controller.dir
+# Directory level rules for directory fan_controller
+
+# Recursive "all" directory target.
+fan_controller/all: fan_controller/CMakeFiles/fan_controller.dir/all
+
+.PHONY : fan_controller/all
+
+# Recursive "preinstall" directory target.
+fan_controller/preinstall:
+
+.PHONY : fan_controller/preinstall
+
+# Recursive "clean" directory target.
+fan_controller/clean: fan_controller/CMakeFiles/fan_controller.dir/clean
+
+.PHONY : fan_controller/clean
+
+#=============================================================================
+# Target rules for target fan_controller/CMakeFiles/fan_controller.dir
 
 # All Build rule for target.
-CMakeFiles/fan_controller.dir/all:
-	$(MAKE) -f CMakeFiles/fan_controller.dir/build.make CMakeFiles/fan_controller.dir/depend
-	$(MAKE) -f CMakeFiles/fan_controller.dir/build.make CMakeFiles/fan_controller.dir/build
+fan_controller/CMakeFiles/fan_controller.dir/all:
+	$(MAKE) -f fan_controller/CMakeFiles/fan_controller.dir/build.make fan_controller/CMakeFiles/fan_controller.dir/depend
+	$(MAKE) -f fan_controller/CMakeFiles/fan_controller.dir/build.make fan_controller/CMakeFiles/fan_controller.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/paul/fan_controller/build/CMakeFiles --progress-num=1,2,3,4 "Built target fan_controller"
-.PHONY : CMakeFiles/fan_controller.dir/all
+.PHONY : fan_controller/CMakeFiles/fan_controller.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/fan_controller.dir/rule: cmake_check_build_system
+fan_controller/CMakeFiles/fan_controller.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/paul/fan_controller/build/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/fan_controller.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 fan_controller/CMakeFiles/fan_controller.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/paul/fan_controller/build/CMakeFiles 0
-.PHONY : CMakeFiles/fan_controller.dir/rule
+.PHONY : fan_controller/CMakeFiles/fan_controller.dir/rule
 
 # Convenience name for target.
-fan_controller: CMakeFiles/fan_controller.dir/rule
+fan_controller: fan_controller/CMakeFiles/fan_controller.dir/rule
 
 .PHONY : fan_controller
 
 # clean rule for target.
-CMakeFiles/fan_controller.dir/clean:
-	$(MAKE) -f CMakeFiles/fan_controller.dir/build.make CMakeFiles/fan_controller.dir/clean
-.PHONY : CMakeFiles/fan_controller.dir/clean
+fan_controller/CMakeFiles/fan_controller.dir/clean:
+	$(MAKE) -f fan_controller/CMakeFiles/fan_controller.dir/build.make fan_controller/CMakeFiles/fan_controller.dir/clean
+.PHONY : fan_controller/CMakeFiles/fan_controller.dir/clean
+
+#=============================================================================
+# Target rules for target application_mock/CMakeFiles/fan_controller_app_mock.dir
+
+# All Build rule for target.
+application_mock/CMakeFiles/fan_controller_app_mock.dir/all: fan_controller/CMakeFiles/fan_controller.dir/all
+	$(MAKE) -f application_mock/CMakeFiles/fan_controller_app_mock.dir/build.make application_mock/CMakeFiles/fan_controller_app_mock.dir/depend
+	$(MAKE) -f application_mock/CMakeFiles/fan_controller_app_mock.dir/build.make application_mock/CMakeFiles/fan_controller_app_mock.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/paul/fan_controller/build/CMakeFiles --progress-num=5,6,7 "Built target fan_controller_app_mock"
+.PHONY : application_mock/CMakeFiles/fan_controller_app_mock.dir/all
+
+# Build rule for subdir invocation for target.
+application_mock/CMakeFiles/fan_controller_app_mock.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/paul/fan_controller/build/CMakeFiles 7
+	$(MAKE) -f CMakeFiles/Makefile2 application_mock/CMakeFiles/fan_controller_app_mock.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/paul/fan_controller/build/CMakeFiles 0
+.PHONY : application_mock/CMakeFiles/fan_controller_app_mock.dir/rule
+
+# Convenience name for target.
+fan_controller_app_mock: application_mock/CMakeFiles/fan_controller_app_mock.dir/rule
+
+.PHONY : fan_controller_app_mock
+
+# clean rule for target.
+application_mock/CMakeFiles/fan_controller_app_mock.dir/clean:
+	$(MAKE) -f application_mock/CMakeFiles/fan_controller_app_mock.dir/build.make application_mock/CMakeFiles/fan_controller_app_mock.dir/clean
+.PHONY : application_mock/CMakeFiles/fan_controller_app_mock.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
