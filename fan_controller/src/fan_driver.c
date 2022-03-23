@@ -10,7 +10,7 @@
 
 #define FAN_READ_BIT(bit_pos) ((FAN & (1 << bit_pos)) >> bit_pos)
 
-#define FAN_WRITE_SPEED(speed) (FAN |= (0x0F & FAN) + (speed << FAN_BITS_SPEED_OFFSET))
+#define FAN_WRITE_SPEED(speed) (FAN = (0x0F & FAN) + (speed << FAN_BITS_SPEED_OFFSET))
 #define FAN_READ_SPEED ((FAN & 0xF0) >> 4)
 
 fan_action_response_type fan_start_stop(fan_state_type new_state)

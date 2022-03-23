@@ -1,14 +1,39 @@
 #include "fan_control_protocol.h"
+#include "simulated_register_area.h"
 #include "fan_driver.h"
+#include "stdio.h"
+
+#define TRUE 1
+#define FALSE 0
+
+static uint8_t initSuccessfully = FALSE;
 
 static int validate_direction(uint8_t direction);
 static int validate_speed(uint8_t speed);
 static uint8_t convert_speed(uint8_t speed);
 
+int8_t fan_control_init()
+{
+    int8_t ret;
 
-int process_message(uint8_t bufferLength, uint8_t* buffer)
+    ret = init_simulated_register_area();
+    if (ret == 0)
+    {
+        initSuccessfully = TRUE;
+    }
+
+    return ret;
+}
+
+int fan_control_process_message(uint8_t bufferLength, uint8_t* buffer)
 {
     int ret_code = FAN_API_SUCCESS;
+
+    if (initSuccessfully != TRUE)
+    {
+        printf("Library was not initialized!");
+        return FAN_API_NOT_READY;
+    }
 
     if (!buffer)
         return FAN_API_BAD_PARAM;
@@ -59,6 +84,17 @@ int process_message(uint8_t bufferLength, uint8_t* buffer)
     }
 
     return ret_code;
+}
+
+uint8_t fan_control_get_register()
+{
+    if (initSuccessfully != TRUE)
+    {
+        printf("Library was not initialized!");
+        return FAN_API_NOT_READY;
+    }
+
+    return FAN;
 }
 
 static int validate_direction(uint8_t direction)

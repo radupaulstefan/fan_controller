@@ -10,16 +10,18 @@
 
 #include "wireless_receiver.h"
 #include "fan_control_protocol.h"
-#include "registers.h"
 
 #define PORT 8000
 #define MAX_BUFFER_LENGTH 16
 
 static void* recv_task(void *vargp);
+static void printByte(uint8_t byte);
 
-void wireless_receiver_start_receive(pthread_t* id)
+void wireless_receiver_start_receive()
 {
-    pthread_create(id, NULL, recv_task, NULL);
+    pthread_t thread_id;
+    fan_control_init();
+    pthread_create(&thread_id, NULL, recv_task, NULL);
 }
 
 static void* recv_task(void *vargp)
@@ -85,9 +87,9 @@ static void* recv_task(void *vargp)
                 printf("%d ", buffer[i]);
             printf("\n");
 
-            int action_ret = process_message(bytes_read, buffer);
+            int action_ret = fan_control_process_message(bytes_read, buffer);
             printf("New FAN (%d) register value: ", action_ret);
-            printByte(FAN);
+            printByte(fan_control_get_register());
         
             memset(buffer, 0, sizeof(buffer));
         }
@@ -95,4 +97,13 @@ static void* recv_task(void *vargp)
 
 exit:
     printf("Exit thread!");
+}
+
+static void printByte(uint8_t byte)
+{
+    printf("0b");
+    for (int i = 0; i < 8; i++)
+        printf("%d", (byte & (1 << (7-i))) >> (7-i));
+    
+    printf("\n");
 }

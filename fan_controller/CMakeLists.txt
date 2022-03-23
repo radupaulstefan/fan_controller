@@ -8,7 +8,7 @@ set(headers
       include/simulated_register_area.h
       include/fan_driver.h
       include/registers.h
-      include/fan_control_protocol.h)
+      public/fan_control_protocol.h)
 
 
 add_library(${PROJECT_NAME} ${headers} ${sources})
@@ -16,6 +16,12 @@ add_library(${PROJECT_NAME} ${headers} ${sources})
 target_include_directories(
     ${PROJECT_NAME}
     PUBLIC
+    public
+#     ${CMAKE_CURRENT_SOURCE_DIR}
+)
+
+target_include_directories(
+    ${PROJECT_NAME}
+    PRIVATE
     include
-    ${CMAKE_CURRENT_SOURCE_DIR}
 )
