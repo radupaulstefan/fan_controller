@@ -85,15 +85,6 @@ static void test(void **state)
     buffer[2] = 0xFA;
     assert_int_equal(fan_control_process_message(3, buffer), FAN_API_SPEED_OUT_OF_RANGE);
     assert_int_equal(fan_control_get_register(), 0b01000011);
-
-    // ret = fan_control_process_message(0, buffer);
-    // assert_return_code(ret, FAN_API_BAD_FRAME);
-
-    // ret = fan_control_process_message(3, buffer);
-    // assert_return_code(ret, FAN_API_DIRECTION_OUT_OF_RANGE);
-
-    // ret = fan_control_process_message(7, buffer);
-    // assert_return_code(ret, FAN_API_SUCCESS);
 }
 
 
