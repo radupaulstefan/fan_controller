@@ -17,6 +17,8 @@ option(${PROJECT_NAME}_ENABLE_UNIT_TEST "Enable unit tests for fan_controller pa
 
 set(CMAKE_C_STANDARD 11)
 
+message("asdfasdfasdfasd ${CMAKE_HOST_WIN32}")
+
 if(${PROJECT_NAME}_BUILD_RELEASE)
   set(CMAKE_BUILD_TYPE "Release")
 else()
