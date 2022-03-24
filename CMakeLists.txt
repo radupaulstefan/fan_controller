@@ -15,9 +15,12 @@ option(${PROJECT_NAME}_BUILD_WITH_APP_MOCK "Build the executable that simulates 
 option(${PROJECT_NAME}_ENABLE_UNIT_TEST "Enable unit tests for fan_controller part" ON)
 # end of build options
 
-set(CMAKE_C_STANDARD 11)
 
-message("asdfasdfasdfasd ${CMAKE_HOST_WIN32}")
+if(${CMAKE_HOST_UNIX})
+  set(CMAKE_C_COMPILER /usr/bin/cc)
+elseif(${CMAKE_HOST_WIN32})
+  set(CMAKE_C_COMPILER mingw)
+endif()
 
 if(${PROJECT_NAME}_BUILD_RELEASE)
   set(CMAKE_BUILD_TYPE "Release")
