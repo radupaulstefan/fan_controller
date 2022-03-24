@@ -17,11 +17,10 @@ target_include_directories(
     ${PROJECT_NAME}
     PUBLIC
     public
-#     ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 target_include_directories(
     ${PROJECT_NAME}
-    PRIVATE
+    PUBLIC
     include
 )

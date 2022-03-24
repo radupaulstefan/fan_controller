@@ -63,7 +63,7 @@ int fan_control_process_message(uint8_t bufferLength, uint8_t* buffer)
                 ret_code = FAN_API_BAD_FRAME;
             else if (validate_direction(buffer[1]) != 0)
                 ret_code = FAN_API_DIRECTION_OUT_OF_RANGE;
-            else if (validate_speed(buffer[2] != 0))
+            else if (validate_speed(buffer[2]) != 0)
                 ret_code = FAN_API_SPEED_OUT_OF_RANGE;
             else
             {
@@ -109,5 +109,5 @@ static int validate_speed(uint8_t speed)
 
 static uint8_t convert_speed(uint8_t speed)
 {
-    return speed -1;
+    return (speed - 1);
 }

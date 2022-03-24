@@ -4,6 +4,7 @@
         "wireless_receiver.h": "c",
         "limits": "c",
         "cstdlib": "c",
-        "socket.h": "c"
+        "socket.h": "c",
+        "fan_control_protocol.h": "c"
     }
 }
